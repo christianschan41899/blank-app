@@ -8,7 +8,7 @@ st.set_page_config(
     menu_items={
         'Get Help': 'https://streamlit.io/',
         'Report a bug': 'https://github.com',
-        'About': 'About your application: **Hello nworld**' 
+        'About': 'About your application: **Hello world**' 
     }
 )
 
