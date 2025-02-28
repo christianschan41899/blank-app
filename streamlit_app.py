@@ -43,7 +43,7 @@ option_6 = container.slider('Please select potion 6')
 st.sidebar.warning('Elements outside of container will be displayed externally')
 container.info('**Option 6:** %s' % (option_6))
 
-conn = st.connection("snowflake")
+conn = st.connection("my_connection", type="snowflake")
 df = conn.query("SELECT * FROM mytable;", ttl="10m")
 
 for row in df.itertuples():
