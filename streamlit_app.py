@@ -42,3 +42,10 @@ container.subheader('Container')
 option_6 = container.slider('Please select potion 6')
 st.sidebar.warning('Elements outside of container will be displayed externally')
 container.info('**Option 6:** %s' % (option_6))
+
+conn = st.connection("snowflake")
+df = conn.query("SELECT * FROM mytable;", ttl="10m")
+
+for row in df.itertuples():
+    st.write(f"{row.NAME} has a :{row.PET}:")
+
