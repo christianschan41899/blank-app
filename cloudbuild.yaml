@@ -6,7 +6,7 @@ steps:
 
       - 
         if [ "$BRANCH_NAME" = "main" ]; then
-          gcloud app deploy app.main.yaml --quiet;
+          gcloud app deploy app.py --quiet;
         elif [ "$BRANCH_NAME" = "dev" ]; then
           gcloud app deploy app.dev.yaml --quiet;
         else
